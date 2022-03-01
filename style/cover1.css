@@ -1,0 +1,51 @@
+.cover1field .underneath {
+    display: none;
+}
+
+.cover1field .hole {
+    display: none;
+}
+
+
+.cover1field div.deep-middle {
+    width: 300px!important;
+    margin-left: 190px!important;
+}
+
+.cover1field div.deep-middle::after {
+    /* content: "fodase"; */
+}
+
+.FS::after {
+    content: " ";
+    width: 50px;
+    background: white;
+    position: absolute;
+    height: 5px;
+    transform: rotate(-15deg);
+}
+
+.FS:hover::after {
+    background: #ab194d;
+}
+
+span.CB3::after {
+    content: " ";
+    position: absolute;
+    width: 5px;
+    height: 36px;
+    background: white;
+    margin-top: 28px;
+    z-index: 1;
+    margin-left: -20px;
+    transform: rotate(18deg);
+}
+
+span.WR3 {
+    z-index: 9999!important;
+    position: absolute;
+}
+
+span.CB3:hover::after {
+    background: #ab194d;
+}
