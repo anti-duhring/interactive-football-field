@@ -18,31 +18,38 @@ jQuery(document).ready(function() {
     const playerDot = document.querySelectorAll('.drag, .dragcovero, .dragdl, .dragol');
 
     coverinput.addEventListener('change', function() {
-            // Coverage value
-    var valueSel = coverinput.value;
+        // Coverage value
+        var valueSel = coverinput.value;
         // call the show coverage function
         showCoverages(valueSel);
         // call the set position function
         eachPosition(valueSel);
-       
-})
+
+        // call the function to drag elements
+        dragElements(valueSel);
+
+        // call the drop zone for tech and gaps
+        dlDragDrop();
+        dragOL();
+
+    })
     // Functions
     // Button change click
-   /* buttonChange.addEventListener('click', function() {*/
+    /* buttonChange.addEventListener('click', function() {*/
 
 
-   /* });*/
-playerDot.forEach((element, index, array) => {
-    element.addEventListener('mousedown', function() {
-        positions_data.forEach((el, index, array) => {
-            if(el.position.toLowerCase().indexOf(jQuery(this).attr('name').toLowerCase()) !=-1){
-        
-            showPositionInfo(el,element.getAttribute('par-'+coverinput.value), coverinput.value,element.getAttribute('id'));
-            
-            }
-          });
+    /* });*/
+    playerDot.forEach((element, index, array) => {
+        element.addEventListener('mousedown', function() {
+            positions_data.forEach((el, index, array) => {
+                if (el.position.toLowerCase().indexOf(jQuery(this).attr('name').toLowerCase()) != -1) {
+
+                    showPositionInfo(el, element.getAttribute('par-' + coverinput.value), coverinput.value, element.getAttribute('id'));
+
+                }
+            });
+        });
     });
-});
     // show coverages
     var showCoverages = function(cover) {
         allCoverages.forEach((element, index, array) => {
@@ -64,13 +71,13 @@ playerDot.forEach((element, index, array) => {
         elementToSetPosition.forEach((element, index, array) => {
 
             var thisElement = elementToSetPosition[index],
-                lineElement = thisElement.getAttribute('lineid-' + cover),thiselementhaveline;
-                if(lineElement==null){
-                thiselementhaveline=false;
-              }
-              else{
-                thiselementhaveline=document.querySelector('#'+lineElement).getAttribute('default-position');
-              }
+                lineElement = thisElement.getAttribute('lineid-' + cover),
+                thiselementhaveline;
+            if (lineElement == null) {
+                thiselementhaveline = false;
+            } else {
+                thiselementhaveline = document.querySelector('#' + lineElement).getAttribute('default-position');
+            }
             setPosition(cover, thisElement.getAttribute('position-' + cover), thisElement.getAttribute('id'), thiselementhaveline);
         })
 
@@ -87,13 +94,13 @@ playerDot.forEach((element, index, array) => {
             positionleft = position.split('-')[1],
             lineattr;
 
-            jQuery('#' + idelement).css('top', positiontop);
-            jQuery('#' + idelement).css('left', positionleft);
+        jQuery('#' + idelement).css('top', positiontop);
+        jQuery('#' + idelement).css('left', positionleft);
 
-        if (lineposition != 'none'&&lineposition!=false) {
+        if (lineposition != 'none' && lineposition != false) {
 
             lineattr = lineposition;
-            var lineid=document.querySelector('#'+idelement).getAttribute('lineid-'+cover);
+            var lineid = document.querySelector('#' + idelement).getAttribute('lineid-' + cover);
             jQuery('#' + lineid).attr('x1', lineattr.split('_')[0].split('-')[0]);
             jQuery('#' + lineid).attr('y1', lineattr.split('_')[0].split('-')[1]);
             jQuery('#' + lineid).attr('x2', lineattr.split('_')[1].split('-')[0]);
@@ -181,12 +188,12 @@ playerDot.forEach((element, index, array) => {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     var dragDLshow = function() {
-        jQuery('#tech, #gaps').css('opacity','1');
+        jQuery('#tech, #gaps').css('opacity', '1');
 
     }
 
     var hidePositionInfo = function() {
-   
+
         jQuery('#dl-desc, .st-text, #db-desc, #cover-description').hide();
         jQuery('.info-content h2').text('Clique em algum jogador');
         jQuery('.bg-prospect').css('background-image', 'url("https://larrybrownsports.com/wp-content/uploads/2022/01/tom-brady-qb-768x475.jpg")');
@@ -203,73 +210,66 @@ playerDot.forEach((element, index, array) => {
             containment: '.offense-field'
         });
     }
-    var showPositionInfo = function(element, par, cover, id){
-    
-      var hide_infos, show_infos;
-        if(element.class=='DL'){
-            hide_infos='#db-desc, #cover-description';
-            show_infos='#dl-desc, .st-text';
+    var showPositionInfo = function(element, par, cover, id) {
 
-            document.querySelector('.position-name-des').innerHTML=element.position;
+        var hide_infos, show_infos;
+        if (element.class == 'DL') {
+            hide_infos = '#db-desc, #cover-description';
+            show_infos = '#dl-desc, .st-text';
+
+            document.querySelector('.position-name-des').innerHTML = element.position;
 
 
-        }
-        else if(element.class=='LB'){
-            show_infos='#db-desc, #cover-description, .st-text';
-            hide_infos='#dl-desc';
-            if(par=='none_none'||par==null||par==undefined){
-                hide_infos='#dl-desc, #db-desc';
-                document.querySelector('#cover-description').innerHTML='O Linebacker não está cobrindo nenhuma <b>zona</b> ou <b>jogador</b>, o que significa que sua função é <b>atacar o Quarterback</b>.'
+        } else if (element.class == 'LB') {
+            show_infos = '#db-desc, #cover-description, .st-text';
+            hide_infos = '#dl-desc';
+            if (par == 'none_none' || par == null || par == undefined) {
+                hide_infos = '#dl-desc, #db-desc';
+                document.querySelector('#cover-description').innerHTML = 'O Linebacker não está cobrindo nenhuma <b>zona</b> ou <b>jogador</b>, o que significa que sua função é <b>atacar o Quarterback</b>.'
+            } else {
+                document.querySelector('#db-desc').innerHTML = 'O <b>' + element.position + '</b> está cobrindo o <b>' + type_data[par.split('_')[1]][0] + '</b> ' + type_data[par.split('_')[1]][1];
+                document.querySelector('#cover-description').innerHTML = type_data[par.split('_')[1]][2];
             }
-            else{
-            document.querySelector('#db-desc').innerHTML='O <b>'+element.position+'</b> está cobrindo o <b>'+type_data[par.split('_')[1]][0]+'</b> '+type_data[par.split('_')[1]][1];
-            document.querySelector('#cover-description').innerHTML=type_data[par.split('_')[1]][2];
-            }
-        }
-        else if(element.class=='DB'){
-            show_infos='#db-desc, #cover-description, .st-text';
-            hide_infos='#dl-desc';
-            document.querySelector('#db-desc').innerHTML='O <b>'+element.position+'</b> está cobrindo o <b>'+element[cover][0]+'</b> '+element[cover][1];
-            document.querySelector('#cover-description').innerHTML=element[cover][2];
-        }
-        else if(element.class=='D_C'){
-            show_infos='#db-desc, #cover-description, .st-text';
-            hide_infos='#dl-desc';
-            document.querySelector('#db-desc').innerHTML='O <b>'+element.position+'</b> está sendo coberto pelo <b>'+element[cover][0]+'</b> '+element[cover][1];
-            document.querySelector('#cover-description').innerHTML=element[cover][2];
-        }
-        else if(element.class=='WR'||element.class=='TE') {
-            show_infos='#db-desc, #cover-description, .st-text';
-            hide_infos='#dl-desc';
-            document.querySelector('#db-desc').innerHTML='O <b>'+element.position+'</b> está sendo coberto pelo <b>'+element[cover][0]+'</b> '+element[cover][1];
-            document.querySelector('#cover-description').innerHTML=element[cover][2];
-        }
-        else if(element.class=='RB'){
-            show_infos='#db-desc, #cover-description, .st-text';
-            hide_infos='#dl-desc';
-    
-            document.querySelector('#db-desc').innerHTML='O <b>'+element.position+'</b> está sendo coberto pelo <b>'+element[cover][0]+'</b> '+element[cover][1];
-            document.querySelector('#cover-description').innerHTML=element[cover][2];
-        }
-        else if(element.class=='OL'||element.class=='QB'){
-            hide_infos='#db-desc, #cover-description, #dl-desc';
-            show_infos='.st-text';
+        } else if (element.class == 'DB') {
+            show_infos = '#db-desc, #cover-description, .st-text';
+            hide_infos = '#dl-desc';
+            document.querySelector('#db-desc').innerHTML = 'O <b>' + element.position + '</b> está cobrindo o <b>' + element[cover][0] + '</b> ' + element[cover][1];
+            document.querySelector('#cover-description').innerHTML = element[cover][2];
+        } else if (element.class == 'D_C') {
+            show_infos = '#db-desc, #cover-description, .st-text';
+            hide_infos = '#dl-desc';
+            document.querySelector('#db-desc').innerHTML = 'O <b>' + element.position + '</b> está sendo coberto pelo <b>' + element[cover][0] + '</b> ' + element[cover][1];
+            document.querySelector('#cover-description').innerHTML = element[cover][2];
+        } else if (element.class == 'WR' || element.class == 'TE') {
+            show_infos = '#db-desc, #cover-description, .st-text';
+            hide_infos = '#dl-desc';
+            document.querySelector('#db-desc').innerHTML = 'O <b>' + element.position + '</b> está sendo coberto pelo <b>' + element[cover][0] + '</b> ' + element[cover][1];
+            document.querySelector('#cover-description').innerHTML = element[cover][2];
+        } else if (element.class == 'RB') {
+            show_infos = '#db-desc, #cover-description, .st-text';
+            hide_infos = '#dl-desc';
 
-            document.querySelector('.position-name-des').innerHTML=element.position;
+            document.querySelector('#db-desc').innerHTML = 'O <b>' + element.position + '</b> está sendo coberto pelo <b>' + element[cover][0] + '</b> ' + element[cover][1];
+            document.querySelector('#cover-description').innerHTML = element[cover][2];
+        } else if (element.class == 'OL' || element.class == 'QB') {
+            hide_infos = '#db-desc, #cover-description, #dl-desc';
+            show_infos = '.st-text';
+
+            document.querySelector('.position-name-des').innerHTML = element.position;
 
         }
-      
-      jQuery(show_infos).show();
-      jQuery(hide_infos).hide();
-      jQuery('.drag span, .dragol span, .dragdl span, .dragcovero span').removeClass('act');
-      jQuery('#'+id).find('span').addClass('act')
-      console.log(id);
-      jQuery('.position-name-des, .info-content h2').text(element.position);
+
+        jQuery(show_infos).show();
+        jQuery(hide_infos).hide();
+        jQuery('.drag span, .dragol span, .dragdl span, .dragcovero span').removeClass('act');
+        jQuery('#' + id).find('span').addClass('act')
+        console.log(id);
+        jQuery('.position-name-des, .info-content h2').text(element.position);
 
 
-      jQuery('.bg-prospect').css('background-image', 'url("'+element.bgImg+'")');
-      jQuery('.bg-prospect').css('background-position', element.bgPos);
-      document.querySelector('.st-text').innerHTML = element.desc;
+        jQuery('.bg-prospect').css('background-image', 'url("' + element.bgImg + '")');
+        jQuery('.bg-prospect').css('background-position', element.bgPos);
+        document.querySelector('.st-text').innerHTML = element.desc;
     }
     //////////////////////////////////////////////////////////////////////////////////////////////
     // DLs drag function
@@ -278,14 +278,16 @@ playerDot.forEach((element, index, array) => {
             scroll: false,
             disabled: false,
             containment: '.defense-field',
-            start:
-                function(){dragDLshow()},
-            drag: function(){
-                    document.querySelector('#gap-name-des').innerHTML='<b>'+jQuery('#gaps').find('.ui-droppable-hover').text()+'</b>';
-                    document.querySelector('#tech-name-des').innerHTML='<b>'+jQuery('#tech').find('.ui-droppable-hover').text()+'</b>';
-             },
-            stop:
-                function(){  jQuery('#tech, #gaps').css('opacity','0');}
+            start: function() {
+                dragDLshow()
+            },
+            drag: function() {
+                document.querySelector('#gap-name-des').innerHTML = '<b>' + jQuery('#gaps').find('.ui-droppable-hover').text() + '</b>';
+                document.querySelector('#tech-name-des').innerHTML = '<b>' + jQuery('#tech').find('.ui-droppable-hover').text() + '</b>';
+            },
+            stop: function() {
+                jQuery('#tech, #gaps').css('opacity', '0');
+            }
 
 
         });
