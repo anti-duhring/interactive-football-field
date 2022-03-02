@@ -9,11 +9,12 @@
       <link rel="stylesheet" href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="script/script_gradient.js"></script>
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
       </style>
       <title>Big Board Draft Cougars</title>
-      <link rel="stylesheet" href="style/css.css">
+      <link rel="stylesheet" href="style/css2.css">
       <script>
          jQuery(document).ready(function(){
          $(".nav a").on("click", function () {
@@ -60,8 +61,8 @@ img.img-cut {
     margin-top: -10px;
 }
 	  </style>
-<script src="script/positions_infos.js"></script>
-<script defer src="script/drag.js"></script>
+<script src="script/dotplayers_info.js"></script>
+<script defer src="script/drag2.js"></script>
 
    </head>
    <body>
@@ -91,280 +92,196 @@ img.img-cut {
                <div class="content-right"></div>
                <div class="content-middle">
                   <div class="field" onselectstart="return false">
-                    <div class="draggin">
-
-<!-- begin CB3 WR3 drag !-->
-<div class="drag1">
-          <div id="CB3" class="CB3-WR3 drag cover1 cover2man" distance="40-40_40-40" field="defense" position-cover1="250-60" position-cover2man="250-60" par-cover1="top_WR3" par-cover2man="top_WR3" lineid-cover1="cover1_CB3-WR3" lineid-cover2man="cover2man_CB3-WR3" name="Cornerback"> <span class="CB3"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
-
-         <div id="WR3" class="CB3-WR3 drag" distance="40-40_40-40" field="offense" position-cover1="320-25" position-cover2man="320-25" position-cover2zone="320-25" position-cover3sky="320-25" par-cover1="bottom_CB3" par-cover2man="bottom_CB3" lineid-cover1="cover1_CB3-WR3" lineid-cover2man="cover2man_CB3-WR3" name="Wide Receiver"><span class="WR3"><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
-
-         <svg class="svg-line svg-cover1man cover1" width="500" height="500"><line class="line-cover1man" id="cover1_CB3-WR3" default-position="95-300_65-350" x1="95" y1="300" x2="65" y2="350" stroke="#ff000085"/></svg></div>
-<!-- end CB3 WR3 drag !-->
-
-<!-- begin CB1 WR1 drag !-->
-<div class="drag2">
-         <div id="CB1" class="CB1-WR1 drag cover1 cover2man" distance="40-40_40-40" field="defense" position-cover1="250-600" position-cover2man="250-600" par-cover1="top_WR1" par-cover2man="top_WR1" lineid-cover1="cover1_CB1-WR1" lineid-cover2man="cover2man_CB1-WR1" name="Cornerback"> <span class="CB1"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
-
-         <div id="WR1" class="CB1-WR1 drag" distance="40-40_40-40"  field="offense" position-cover1="320-600" position-cover2man="320-600" position-cover2zone="320-600" position-cover3sky="320-600" par-cover1="bottom_CB1" par-cover2man="bottom_CB1" lineid-cover1="cover1_CB1-WR1" lineid-cover2man="cover2man_CB1-WR1" name="Wide Receiver"><span class="WR1"><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
-
-         <svg class="svg-line svg-cover1man cover1"  width="500" height="500" ><line default-position="640-300_640-350" class="line-cover1man" id="cover1_CB1-WR1" x1="640" y1="300" x2="640" y2="350" stroke="#ff000085"/></svg>
-       </div>
-<!-- end CB1 WR1 drag !-->
-
-<!-- begin CB1 WR1 drag !-->
-<div class="drag3">
-         <div id="CB2" class="CB2-WR2 drag cover1 cover2man" distance="40-40_40-40" field="defense" position-cover1="250-520" position-cover2man="250-520" par-cover1="top_WR2" par-cover2man="top_WR2" lineid-cover1="cover1_CB2-WR2" lineid-cover2man="cover2man_CB2-WR2" name="Cornerback"> <span class="CB2"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
-
-         <div id="WR2" class="CB2-WR2 drag" distance="40-40_40-40"  field="offense" position-cover1="320-520" position-cover2man="320-520" position-cover2zone="320-520" position-cover3sky="320-520" par-cover1="bottom_CB2" par-cover2man="bottom_CB2" lineid-cover1="cover1_CB2-WR2" lineid-cover2man="cover2man_CB2-WR2" name="Wide Receiver"><span class="WR2 act"><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
-
-         <svg class="svg-line svg-cover1man cover1"  width="500" height="500" ><line default-position="560-300_560-350" class="line-cover1man" id="cover1_CB2-WR2" x1="560" y1="300" x2="560" y2="350" stroke="#ff000085"/></svg>
-       </div>
-<!-- end CB1 WR1 drag !-->
-
-<!-- begin CB4 WR4 drag !-->
-<div class="drag4">
-         <div id="CB4" class="CB4-WR4 drag cover1" distance="40-40_40-40" field="defense" position-cover1="199-393" position-cover2man="155-410" par-cover1="top_WR4" par-cover2man="bottom_cover2man-DR" lineid-cover1="cover1_CB4-WR4" lineid-cover2man="cover2man_CB4-DR" name="Strong Safety"> <span class="CB4" ><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
-
-         <div id="WR4" class="CB4-WR4 drag" distance="40-40_40-40"  field="offense" position-cover1="340-468" position-cover2man="340-468" position-cover2zone="340-468" position-cover3sky="340-468" par-cover1="bottom_CB4" par-cover2man="bottom_RLB" lineid-cover1="cover1_CB4-WR4" lineid-cover2man="cover2man_RLB-WR4" name="Tight End"><span class="WR4" ><label class="position-legend">Tight End<i></i></label>TE</span></div>
-
-         <svg class="svg-line svg-cover1man cover1"  width="500" height="500" ><line default-position="433-240_500-370" class="line-cover1man" id="cover1_CB4-WR4" x1="433" y1="240" x2="500" y2="370" stroke="#ff000085"/></svg>
-       </div>
-<!-- end CB4 WR4 drag !-->
-<!-- begin LB RB !-->
-<div class="drag5">
-         <div id="LLB" class="LLB-RB drag cover1 cover2man" distance="40-40_40-40" field="defense" position-cover1="236-248" position-cover2man="236-248" par-cover1="top_RB" par-cover2man="top_RB" lineid-cover1="cover1_LLB-RB" lineid-cover2man="cover2man_LLB-RB" name="Linebacker"><span class="LLB" ><label class="position-legend">Linebacker<i></i></label>LB</span></div>
-
-         <div id="RB" class="LLB-RB drag" distance="40-40_40-40"  field="offense" position-cover1="380-280" position-cover2man="380-280" position-cover2zone="380-280" position-cover3sky="380-280" par-cover1="bottom_LLB" par-cover2man="bottom_LLB" lineid-cover1="cover1_LLB-RB" lineid-cover2man="cover2man_LLB-RB" name="Runningback"><span class="RB" ><label class="position-legend">Runningback<i></i></label>RB</span></div>
-
-         <svg class="svg-line svg-cover1man cover1"  width="500" height="500" ><line default-position="280-277_320-420" class="line-cover1man" id="cover1_LLB-RB" x1="280" y1="277" x2="320" y2="420" stroke="#ff000085" /></svg>
-</div>
-<!-- end LB RB !-->
-<!-- begin OL !-->
-<div class="drag6 OL">
-  <div id="gaps">
-<div class="c_l" id="c_l"><label>C</label></div>
-<div class="b_l" id="b_l"><label>B</label></div>
-<div class="a_l" id="a_l"><label>A</label></div>
-<div class="a_r" id="a_r"><label>A</label></div>
-<div class="b_r" id="b_r"><label>B</label></div>
-<div class="c_r" id="c_r"><label>C</label></div>
-<div class="d_r" id="d_r"><label>D</label></div>
-  </div>
-         <div id="RT" class="RT dragol" distance="40-40_40-40" field="offense" position-cover1="323-420" position-cover2man="323-420" position-cover2zone="323-420" position-cover3sky="323-420" dragOLDL name="Right Tackle"> <span class="RT" ><label class="position-legend">Right Tackle<i></i></label>RT</span></div>
-
-         <div id="RG" class="RG dragol" distance="40-40_40-40" field="offense" position-cover1="323-369" position-cover2man="323-369" position-cover2zone="323-369" position-cover3sky="323-369" dragOLDL name="Right Guard"><span class="RG" ><label class="position-legend">Right Guard<i></i></label>RG</span></div>
-
-         <div id="C" class="C dragol" distance="40-40_40-40" field="offense" position-cover1="323-319" position-cover2zone="323-319" position-cover2man="323-319" position-cover3sky="323-319" dragOLDL name="Center"><span class="C" ><label class="position-legend">Center<i></i></label>C</span></div>
-
-         <div id="LG" class="LG dragol" distance="40-40_40-40" field="offense" position-cover1="323-272" position-cover2man="323-272" position-cover2zone="323-272" position-cover3sky="323-272" dragOLDL name="Left Guard"><span class="LG" ><label class="position-legend">Left Guard<i></i></label>LG</span></div>
-
-         <div id="LT" class="LT dragol" distance="40-40_40-40" field="offense" position-cover1="323-223" position-cover2man="323-223" position-cover2zone="323-223" position-cover3sky="323-223" dragOLDL name="Left Tackle"><span class="LT" ><label class="position-legend">Left Tackle<i></i></label>LT</span></div>
-       </div>
-<!-- end OL !-->
-<!-- begin backfield !-->
-<div class="drag7 BF">
-         <div id="QB" class="QB drag" distance="40-40_40-40" field="offense" name="Quarterback"> <span class="QB" ><label class="position-legend">Quarterback<i></i></label>QB</span></div>
-
-</div>
-<!-- end backfield !-->
-
-<!-- begin DL !-->
-<div class="drag8 DL">
-  <div class="techs" id="tech">
-
-<div id="5_l" class="t544i" color-drop="1582FD"><label>5</label></div>
-<div id="4_l" class="t544i" color-drop="1582FD"><label>4</label></div>
-<div id="4i_l" class="t544i" color-drop="1582FD"><label>4i</label></div>
-<div id="3_l" class="t322i" color-drop="51BC37"><label>3</label></div>
-<div id="2_l" class="t322i" color-drop="51BC37"><label>2</label></div>
-<div id="2i_l" class="t322i" color-drop="51BC37"><label>2i</label></div>
-<div id="1_l" class="t10" color-drop="FCDD30"><label>1</label></div>
-<div id="0" class="t10" color-drop="FCDD30"><label>0</label></div>
-<div id="1_r" class="t10" color-drop="FCDD30"><label>1</label></div>
-<div id="2i_r" class="t322i" color-drop="51BC37"><label>2i</label></div>
-<div id="2_r" class="t322i" color-drop="51BC37"><label>2</label></div>
-<div id="3_r" class="t322i" color-drop="51BC37"><label>3</label></div>
-<div id="4i_r" class="t544i" color-drop="1582FD"><label>4i</label></div>
-<div id="4_r" class="t544i" color-drop="1582FD"><label>4</label></div>
-<div id="5_r" class="t544i" color-drop="1582FD"><label>5</label></div>
-<div id="6i_r" class="t966i" color-drop="EC3445"><label>6i</label></div>
-<div id="6_r" class="t966i" color-drop="EC3445"><label>6</label></div>
-<div id="9_r" class="t966i" color-drop="EC3445"><label>9</label></div>
-  </div>
-         <div id="RE" class="RE dragdl" distance="40-40_40-40" field="defense" position-cover1="280-452" position-cover2man="280-452" position-cover2zone="280-452" position-cover3sky="280-452" dragOLDL name="Edge"> <span class="RE" ><label class="position-legend">Edge<i></i></label>E</span></div>
+                      <div id="defense_area"></div>
+                      <div id="offense_area"></div>
+                    <div class="dragcontainer cover1" id="cover1">
 
-         <div id="DTR" class="DTR dragdl" distance="40-40_40-40" field="defense" position-cover1="280-369" position-cover2man="280-369" position-cover2zone="280-369" position-cover3sky="280-350" dragOLDL name="Defensive Tackle"><span class="DTR" ><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+                        <div id="cover1_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-         <div id="DTL" class="DTL dragdl" distance="40-40_40-40" field="defense" position-cover1="280-306" position-cover2man="280-306" position-cover2zone="280-306" position-cover3sky="280-270" dragOLDL name="Defensive Tackle"><span class="DTL" ><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+                        <div id="cover1_CB2" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-         <div id="LE" class="LE dragdl" distance="40-40_40-40" field="defense" position-cover1="280-207" position-cover2man="280-207" position-cover2zone="280-207" position-cover3sky="280-207" dragOLDL name="Edge"> <span class="LE" ><label class="position-legend">Edge<i></i></label>E</span></div>
+                        <div id="cover1_CB3" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-</div>
-<!-- end DL !-->
+                        <div id="cover1_SS" name="Strong Safety" class="dragelement SS" line="true" containment="defense"><span><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
 
-<!-- begin LB !-->
-<div class="drag9 LB">
-         <div id="RLB" class="RLB drag cover1 cover2man" distance="40-40_40-40" field="defense" position-cover2man="230-412" position-cover1="223-330" par-cover1="none_none" par-cover2man="top_WR4" lineid-cover1="none_none" lineid-cover2man="cover2man_RLB-WR4" name="Linebacker"> <span class="RLB" ><label class="position-legend">Linebacker<i></i></label>LB</span></div>
-         <svg class="svg-line svg-cover2man cover2man"  width="500" height="500" ><line default-position="452-269_508-380" class="line-cover2man" id="cover2man_RLB-WR4" x1="452" y1="269" x2="508" y2="380" stroke="#ff000085" /></svg>
-         <svg   width="500" height="500" style="visibility:hidden;"><line default-position="280-277_320-420"  id="none_none" x1="280" y1="277" x2="320" y2="420" stroke="#ff000085"/></svg>
+                        <div id="cover1_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
 
-</div>
-<!-- end DL !-->
-<!-- begin S !-->
-<div class="drag10 S">
+                        <div id="cover1_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
+                        <div id="cover1_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
+                        <div id="cover1_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-</div>
-<!-- end S !-->
-<!-- begin Coverages !-->
-<div class="covers">
-  <!-- begin Cover 1 !-->
-<div class="cover1 dragcover">
-  <div id="FS" class="FS-DM dragcovero" distance="110-140_40-40" field="defense" position-cover1="151-277" position-cover2man="154-287" par-cover1="bottom_DM" par-cover2man="bottom_cover2man_FS-DL" lineid-cover1="cover1_FS-DM" lineid-cover2man="cover2man_FS-DL" name="Free Safety"> <span class="FS" ><label class="position-legend">Free Safety<i></i></label>FS</span></div>
+                        <div id="cover1_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-<div id="DM" class="FS-DM dragcovero" distance="110-140_40-40" field="defense" position-cover1="0-250" par-cover1="top_FS" par-cover2man="none_none" lineid-cover1="cover1_FS-DM" lineid-cover2man="none_none" name="Deep Middle"><label class="legend-coverage">Deep Middle</label>
+                        <div id="cover1_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-</div>
-  <svg class="svg-line svg-cover1man cover1"  width="500" height="500"><line default-position="360-140_317-191" class="line-cover1man" id="cover1_FS-DM" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
-</div>
-  <!-- end Cover 1 !-->
+                        <div id="cover1_RLB" name="Linebacker" class="dragelement LB" line="false" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-  <!-- begin Cover 2 man !-->
-<div class="cover2man dragcover">
-<div id="cover2man-FS" class="cover2man_FS-DL dragcovero" distance="160-140_40-40" field="defense" position-cover2man="154-287"
- par-cover1="none_none" par-cover2man="bottom_cover2man-DL" lineid-cover1="none_none" lineid-cover2man="cover2man_FS-DL" name="Free Safety"> <span class="FS" ><label class="position-legend">Free Safety<i></i></label>FS</span></div>
+                        <div class="zones" id="cover1_zones">
 
- <div id="cover2man-CB4" class="cover2man_FS-DR dragcovero" distance="160-140_40-40" field="defense" position-cover2man="155-410" par-cover1="none_none" par-cover2man="bottom_cover2man-DR" lineid-cover1="none_none" lineid-cover2man="cover2man_CB4-DR" name="Strong Safety"> <span class="CB4" ><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
-<div id="cover2man-DL" class="cover2man_FS-DL dragcovero" distance="160-140_40-40" field="defense" position-cover2man="0-20" par-cover1="none_none" par-cover2man="top_cover2man-FS" lineid-cover1="none_none" lineid-cover2man="cover2man_FS-DL" name="Deep Left"><label class="legend-coverage">Deep Left</label>
+                            <div id="cover1_DM" class="DM zonedrag" name="Deep Middle" line="true" containment="defense"><label class="legend-coverage">Deep Middle</label>
+                            </div>
 
-</div>
-<div id="cover2man-DR" class="cover2man_CB4-DR dragcovero" distance="160-140_40-40" field="defense" position-cover2man="0-370" par-cover1="none_none" par-cover2man="top_cover2man-CB4" lineid-cover1="none_none" lineid-cover2man="cover2man_CB4-DR" name="Deep Right"><label class="legend-coverage">Deep Right</label>
+                        </div>
 
-</div>
-  <svg class="svg-line svg-cover2man cover2man"  width="500" height="500"><line default-position="200-140_317-191" class="line-cover2man" id="cover2man_FS-DL" x1="200" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
-  <svg class="svg-line svg-cover2man cover2man"  width="500" height="500"><line default-position="454-190_510-150" class="line-cover2man" id="cover2man_CB4-DR" x1="454" y1="190" x2="510" y2="150" stroke="#0000ff75" /></svg>
-</div>
-<div class="cover2 cover2lines">
-  <svg class="svg-line svg-cover2man cover2man"  width="500" height="500" ><line default-position="640-300_640-350" class="line-cover2man" id="cover2man_CB1-WR1" x1="640" y1="300" x2="640" y2="350" stroke="#ff000085" /></svg>
-    <svg class="svg-line svg-cover2man cover2man"  width="500" height="500" ><line default-position="560-300_560-350" class="line-cover2man" id="cover2man_CB2-WR2" x1="560" y1="300" x2="560" y2="350" stroke="#ff000085" /></svg>
-    <svg class="svg-line svg-cover2man cover2man"  width="500" height="500" ><line default-position="280-277_320-420" class="line-cover2man" id="cover2man_LLB-RB" x1="280" y1="277" x2="320" y2="420" stroke="#ff000085" /></svg>
-        <svg class="svg-line svg-cover2man cover2man"  width="500" height="500" ><line default-position="95-300_65-350" class="line-cover2man" id="cover2man_CB3-WR3" x1="95" y1="300" x2="65" y2="350" stroke="#ff000085" /></svg>
-</div>
-<!-- begin Cover 2 zone !-->
-<div class="cover2zone dragcover">
-<div id="cover2zone-FS" class="cover2zone_FS-DL dragcovero" distance="160-140_40-40" field="defense" position-cover2zone="154-287" par-cover2zone="bottom_cover2zone-DL" lineid-cover2zone="cover2zone_FS-DL" name="Free Safety"> <span class="FS" ><label class="position-legend">Free Safety<i></i></label>FS</span></div>
-<div id="cover2zone-CB4" class="cover2zone_CB4-DR dragcovero" distance="160-140_40-40" field="defense" position-cover2zone="155-410" par-cover2zone="bottom_cover2zone-DR" lineid-cover2zone="cover2zone_CB4-DR" name="Strong Safety"> <span class="CB4" ><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
+                        <div class="lines" id="cover1_lines">
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line1" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line2" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-<div id="cover2zone-DL" class="cover2zone_FS-DL dragcovero" distance="160-140_40-40" field="defense" position-cover2zone="0-20"  par-cover2zone="top_cover2zone-FS"  lineid-cover2zone="cover2zone_FS-DL" name="Deep Left"><label class="legend-coverage">Deep Left</label></div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line3" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-  <div id="cover2zone-DR" class="cover2zone_CB4-DR dragcovero" distance="160-140_40-40" field="defense" position-cover2zone="0-370" par-cover2zone="top_cover2zone-CB4"  lineid-cover2zone="cover2zone_CB4-DR" name="Deep Right"><label class="legend-coverage">Deep Right</label>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line4" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-  </div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line5" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-  <div id="cover2zone-CB3" class="cover2zone_CB3-LF dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="250-60" par-cover2zone="bottom_cover2zone-LF"  lineid-cover2zone="cover2zone_CB3-LF" name="Cornerback"> <span class="CB3"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover1_line6" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
+                        </div>
 
-  <div id="cover2zone-LLB" class="cover2zone_LLB-LC dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="236-248" par-cover2zone="bottom_cover2zone-LC"  lineid-cover2zone="cover2zone_LLB-LC" name="Linebacker"><span class="LLB" ><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+                    </div>
+                    <div class="dragcontainer cover2man" id="cover2man">
 
-  <div id="cover2zone-RLB" class="cover2zone_RLB-H dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="230-412" par-cover2zone="bottom_cover2zone-H"  lineid-cover2zone="cover2zone_RLB-H" name="Linebacker"> <span class="RLB" ><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+                        <div id="cover2man_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-  <div id="cover2zone-CB2" class="cover2zone_CB2-RC dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="250-520" par-cover2zone="bottom_cover2zone-RC" lineid-cover2zone="cover2zone_CB2-RC" name="Cornerback"> <span class="CB2"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                        <div id="cover2man_CB2" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-  <div id="cover2zone-CB1" class="cover2zone_CB1-RF dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="250-600" par-cover2zone="bottom_cover2zone-RF"  lineid-cover2zone="cover2zone_CB1-RF" name="Cornerback"> <span class="CB1"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                        <div id="cover2man_CB3" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
+                        <div id="cover2man_SS" name="Strong Safety" class="dragelement SS" line="true" containment="defense"><span><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
 
-  <div id="cover2zone-LF" class="cover2zone_CB3-LF dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="185-0"  par-cover2zone="top_cover2zone-CB3"  lineid-cover2zone="cover2zone_CB3-LF" name="Left Flat"><label class="legend-coverage">Left Flat</label></div>
+                        <div id="cover2man_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
 
-  <div id="cover2zone-LC" class="cover2zone_LLB-LC dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="185-135"  par-cover2zone="top_cover2zone-LLB"  lineid-cover2zone="cover2zone_LLB-LC" name="Left Curl"><label class="legend-coverage">Left Curl</label></div>
+                        <div id="cover2man_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-  <div id="cover2zone-H" class="cover2zone_RLB-H dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="185-275"  par-cover2zone="top_cover2zone-RLB"  lineid-cover2zone="cover2zone_RLB-H" name="Hook"><label class="legend-coverage">Hook</label></div>
+                        <div id="cover2man_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-  <div id="cover2zone-RC" class="cover2zone_CB2-RC dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="185-415"  par-cover2zone="top_cover2zone-CB2"  lineid-cover2zone="cover2zone_CB2-RC" name="Right Curl"><label class="legend-coverage">Right Curl</label></div>
+                        <div id="cover2man_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-  <div id="cover2zone-RF" class="cover2zone_CB1-RF dragcovero" distance="90-100_40-40" field="defense" position-cover2zone="185-555"  par-cover2zone="top_cover2zone-CB1"  lineid-cover2zone="cover2zone_CB1-RF" name="Right Flat"><label class="legend-coverage">Right Flat</label></div>
-</div>
+                        <div id="cover2man_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-<div class="cover2zone cover2zonelines">
-  <svg class="svg-line svg-cover2zone" width="500" height="500"><line default-position="200-140_317-191" class="line-cover2zone" id="cover2zone_FS-DL" x1="200" y1="140" x2="317" y2="191" stroke="#0000ff75"></line></svg>
-  <svg class="svg-line svg-cover2zone" width="500" height="500"><line default-position="454-190_510-150" class="line-cover2zone" id="cover2zone_CB4-DR" x1="454" y1="190" x2="510" y2="150" stroke="#0000ff75"></line></svg>
+                        <div id="cover2man_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-  <svg class="svg-line svg-cover2zone" width="500" height="500"><line default-position="95-300_80-290" class="line-cover2zone" id="cover2zone_CB3-LF" x1="95" y1="300" x2="80" y2="290" stroke="#ff8d0091"></line></svg>
+                        <div id="cover2man_RLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-    <svg class="svg-line svg-cover2zone" width="500" height="500"><line class="line-cover2zone" id="cover2zone_LLB-LC" default-position="280-277_230-290"  x1="280" y1="277" x2="230" y2="290" stroke="#ff8d0091"></line></svg>
+                        <div class="zones" id="cover2man_zones">
 
-    <svg class="svg-line svg-cover2zone" width="500" height="500"><line  class="line-cover2zone" id="cover2zone_RLB-H" default-position="450-270_360-290" x1="450" y1="270" x2="360" y2="290" stroke="#ff8d0091"></line></svg>
+                            <div id="cover2man_DL" class="DL zonedrag" name="Deep Left" line="true" containment="defense"><label class="legend-coverage">Deep Left</label>
+                            </div>
 
-    <svg class="svg-line svg-cover2zone" width="500" height="500"><line  class="line-cover2zone" id="cover2zone_CB2-RC" default-position="560-290_500-290"  x1="560" y1="290" x2="500" y2="290" stroke="#ff8d0091"></line></svg>
+                            <div id="cover2man_DR" class="DR zonedrag" name="Deep Right" line="true" containment="defense"><label class="legend-coverage">Deep Right</label>
+                            </div>
 
-    <svg class="svg-line svg-cover2zone" width="500" height="500"><line default-position="640-300_640-310" class="line-cover2zone" id="cover2zone_CB1-RF" x1="640" y1="300" x2="640" y2="310" stroke="#ff8d0091"></line></svg>
+                        </div>
 
+                        <div class="lines" id="cover2man_lines">
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line1" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line2" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-</div>
-  <!-- end Cover 2 zone !-->
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line3" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-  <!-- begin Cover 3 sky !-->
-  <div class="cover3sky dragcover">
-    <div id="cover3sky-FS" class="cover3sky-DM dragcovero" distance="130-140_40-40" field="defense" position-cover3sky="150-330" par-cover3sky="bottom_cover3sky-DM" lineid-cover3sky="cover3sky_FS-DM" name="Free Safety"> <span class="FS"><label class="position-legend">Free Safety<i></i></label>FS</span></div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line4" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-    <div id="cover3sky-CB4" class="cover3sky-DR dragcovero" distance="110-100_40-40" field="defense" position-cover3sky="220-470" par-cover3sky="bottom_cover3sky-RF" lineid-cover3sky="cover3sky_CB4-RF" name="Strong Safety"> <span class="CB4"><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line5" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-    <div id="cover3sky-DL" class="cover3sky_FS-DL dragcovero" distance="120-130_40-40" field="defense" position-cover3sky="0-20" par-cover3sky="top_cover3sky-CB1" lineid-cover3sky="cover3sky_CB1-DL" name="Deep Left"><label class="legend-coverage">Deep Left</label></div>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line6" x1="360" y1="140" x2="317" y2="191" stroke="#ff000085" /></svg>
 
-      <div id="cover3sky-DM" class="cover3sky_FS-DM dragcovero" distance="130-140_40-40" field="defense" position-cover3sky="0-240" par-cover3sky="top_cover3sky-FS" lineid-cover3sky="cover3sky_FS-DM" name="Deep Middle"><label class="legend-coverage">Deep Middle</label>
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2man_line7" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        </div>
 
-      </div>
+                    </div>
 
-      <div id="cover3sky-CB3" class="cover3sky_CB3-LF dragcovero" distance="120-140_40-40" field="defense" position-cover3sky="250-580" par-cover3sky="bottom_cover3sky-H" lineid-cover3sky="cover3sky_CB3-DR" name="Cornerback"> <span class="CB3"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                    <div class="dragcontainer cover2zone" id="cover2zone">
 
-      <div id="cover3sky-LLB" class="cover3sky_LLB-LC dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="250-300" par-cover3sky="bottom_cover3sky-LC" lineid-cover3sky="cover3sky_LLB-LC" name="Linebacker"><span class="LLB"><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+                        <div id="cover2zone_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-      <div id="cover3sky-RLB" class="cover3sky_RLB-H dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="250-420" par-cover3sky="bottom_cover3sky-RC" lineid-cover3sky="cover3sky_RLB-RC" name="Linebacker"> <span class="RLB"><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+                        <div id="cover2zone_CB2" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-      <div id="cover3sky-CB2" class="cover3sky_CB2-RC dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="250-180" par-cover3sky="bottom_cover3sky-LF" lineid-cover3sky="cover3sky_CB2-LF" name="Cornerback"> <span class="CB2"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                        <div id="cover2zone_CB3" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
 
-      <div id="cover3sky-CB1" class="cover3sky_CB1-RF dragcovero" distance="120-130_40-40" field="defense" position-cover3sky="250-50" par-cover3sky="bottom_cover3sky-DL" lineid-cover3sky="cover3sky_CB1-DL" name="Cornerback"> <span class="CB1"><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+                        <div id="cover2zone_SS" name="Strong Safety" class="dragelement SS" line="true" containment="defense"><span><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
 
+                        <div id="cover2zone_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
 
-      <div id="cover3sky-LF" class="cover3sky_CB3-LF dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="180-0" par-cover3sky="top_cover3sky-CB2" lineid-cover3sky="cover3sky_CB2-LF" name="Left Flat"><label class="legend-coverage">Left Flat</label></div>
+                        <div id="cover2zone_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-      <div id="cover3sky-LC" class="cover3sky_LLB-LC dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="180-175" par-cover3sky="top_cover3sky-LLB" lineid-cover3sky="cover3sky_LLB-LC" name="Left Curl"><label class="legend-coverage">Left Curl</label></div>
+                        <div id="cover2zone_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-      <div id="cover3sky-H" class="cover3sky_RLB-H dragcovero" distance="120-140_40-40" field="defense" position-cover3sky="0-460" par-cover3sky="top_cover3sky-CB3" lineid-cover3sky="cover3sky_CB3-DR" name="Deep Right"><label class="legend-coverage">Deep Right</label></div>
+                        <div id="cover2zone_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-      <div id="cover3sky-RC" class="cover3sky_CB2-RC dragcovero" distance="90-100_40-40" field="defense" position-cover3sky="180-345" par-cover3sky="top_cover3sky-RLB" lineid-cover3sky="cover3sky_RLB-RC" name="Right Curl"><label class="legend-coverage">Right Curl</label></div>
+                        <div id="cover2zone_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-      <div id="cover3sky-RF" class="cover3sky_CB1-RF dragcovero" distance="110-100_40-40" field="defense" position-cover3sky="180-520" par-cover3sky="top_cover3sky-CB4" lineid-cover3sky="cover3sky_CB4-RF" name="Right Flat"><label class="legend-coverage">Right Flat</label></div>
-    </div>
+                        <div id="cover2zone_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-    <div class="cover3sky cover3skylines" >
-            <svg class="svg-line svg-cover3sky" width="500" height="500"><line default-position="139-130_90-290" class="line-cover3sky" id="cover3sky_CB1-DL" x1="139" y1="130" x2="90" y2="290" stroke="#0000ff75"></line></svg>
+                        <div id="cover2zone_RLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
-            <svg class="svg-line svg-cover3sky" width="500" height="500"><line default-position="370-140_370-190" class="line-cover3sky" id="cover3sky_FS-DM" x1="370" y1="140" x2="370" y2="190" stroke="#0000ff75"></line></svg>
+                        <div class="zones" id="cover2zone_zones">
 
-            <svg class="svg-line svg-cover3sky" width="500" height="500"><line default-position="580-140_620-290" class="line-cover3sky" id="cover3sky_CB3-DR" x1="580" y1="140" x2="620" y2="290" stroke="#0000ff75"></line></svg>
+                            <div id="cover2zone_DL" class="DL zonedrag" name="Deep Left" line="true" containment="defense"><label class="legend-coverage">Deep Left</label>
+                            </div>
 
-              <svg class="svg-line svg-cover3sky" width="500" height="500"><line class="line-cover3sky" id="cover3sky_LLB-LC" default-position="265-280_340-290" x1="265" y1="280" x2="340" y2="290" stroke="#ff8d0091"></line></svg>
+                            <div id="cover2zone_DR" class="DR zonedrag" name="Deep Right" line="true" containment="defense"><label class="legend-coverage">Deep Right</label>
+                            </div>
 
-              <svg class="svg-line svg-cover3sky" width="500" height="500"><line class="line-cover3sky" id="cover3sky_RLB-RC" default-position="436-280_460-290" x1="436" y1="280" x2="460" y2="290" stroke="#ff8d0091"></line></line></svg>
+                            <div id="cover2zone_LF" class="LF zonedrag" name="Left Flat" line="true" containment="defense"><label class="legend-coverage">Left Flat</label>
+                            </div>
 
-              <svg class="svg-line svg-cover3sky" width="500" height="500"><line class="line-cover3sky" id="cover3sky_CB2-LF" default-position="90-280_220-290" x1="90" y1="280" x2="220" y2="290" stroke="#ff8d0091"></line></svg>
+                            <div id="cover2zone_LC" class="LC zonedrag" name="Left Curl" line="true" containment="defense"><label class="legend-coverage">Left Curl</label>
+                            </div>
 
-              <svg class="svg-line svg-cover3sky" width="500" height="500"><line default-position="630-280_510-260" class="line-cover3sky" id="cover3sky_CB4-RF" x1="630" y1="280" x2="510" y2="260" stroke="#ff8d0091"></line></svg>
+                            <div id="cover2zone_H" class="H zonedrag" name="Hook" line="true" containment="defense"><label class="legend-coverage">Hook</label>
+                            </div>
 
+                            <div id="cover2zone_RC" class="RC zonedrag" name="Right Curl" line="true" containment="defense"><label class="legend-coverage">Right Curl</label>
+                            </div>
 
-          </div>
-    <!-- end Cover 2 zone !-->
-</div>
-<!-- end coverages !-->
-<!-- begin field-division !-->
-<div class="defense-field">
-</div>
-<div class="offense-field">
-</div>
-<!-- end field-division !-->
-       </div>
+                            <div id="cover2zone_RF" class="RF zonedrag" name="Right Flat" line="true" containment="defense"><label class="legend-coverage">Right Flat</label>
+                            </div>
+                        </div>
 
+                        <div class="lines" id="cover2zone_lines">
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line1" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line2" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line3" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line4" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line5" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line6" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line7" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        </div>
+
+                    </div>
+
+                    <div class="dragcontainer offense" id="offense_field">
+                        <div id="WR1" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
+
+                        <div id="WR2" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
+
+                        <div id="WR3" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
+
+                        <div id="TE" name="Tight End" class="dragelement TE" line="true" containment="offense"><span><label class="position-legend">Tight End<i></i></label>TE</span></div>
+
+                        <div id="LT" name="Left Tackle" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Left Tackle<i></i></label>LT</span></div>
+                        
+                        <div id="LG" name="Left Guard" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Left Guard<i></i></label>LG</span></div>
+
+                        <div id="C" name="Center" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Center<i></i></label>C</span></div>
+                        
+                        <div id="RG" name="Right Guard" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Right Guard<i></i></label>RG</span></div>
+                        
+                        <div id="RT" name="Right Tackle" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Right Tackle<i></i></label>RT</span></div>
+
+                        <div id="RB" name="Runningback" class="dragelement RB" line="true" containment="offense"><span><label class="position-legend">Runningback<i></i></label>RB</span></div>
+
+                        <div id="QB" name="Quarterback" class="dragelement QB" line="false" containment="offense"><span><label class="position-legend">Quarterback<i></i></label>QB</span></div>
+
+                    </div>
 
                   </div>
                   <div class="content-prospect">
