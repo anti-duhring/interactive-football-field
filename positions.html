@@ -9,11 +9,12 @@
       <link rel="stylesheet" href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="script/script_gradient.js"></script>
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
       </style>
       <title>Big Board Draft Cougars</title>
-      <link rel="stylesheet" href="style/css.css">
+      <link rel="stylesheet" href="style/css2.css">
       <script>
          jQuery(document).ready(function(){
          $(".nav a").on("click", function () {
@@ -60,8 +61,8 @@ img.img-cut {
     margin-top: -10px;
 }
 	  </style>
-<script src="script/positions_infos.js"></script>
-<script defer src="script/drag.js"></script>
+<script src="script/dotplayers_info.js"></script>
+<script defer src="script/drag2.js"></script>
 
    </head>
    <body>
@@ -253,6 +254,72 @@ img.img-cut {
                             <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line6" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
 
                             <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover2zone_line7" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        </div>
+
+                    </div>
+
+                    <div class="dragcontainer cover3sky" id="cover3sky">
+
+                        <div id="cover3sky_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover3sky_CB2" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover3sky_CB3" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover3sky_SS" name="Strong Safety" class="dragelement SS" line="true" containment="defense"><span><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
+
+                        <div id="cover3sky_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
+
+                        <div id="cover3sky_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+
+                        <div id="cover3sky_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+
+                        <div id="cover3sky_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+
+                        <div id="cover3sky_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+
+                        <div id="cover3sky_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+
+                        <div id="cover3sky_RLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+
+                        <div class="zones" id="cover3sky_zones">
+
+                            <div id="cover3sky_DL" class="DL zonedrag" name="Deep Left" line="true" containment="defense"><label class="legend-coverage">Deep Left</label>
+                            </div>
+
+                            <div id="cover3sky_DR" class="DR zonedrag" name="Deep Right" line="true" containment="defense"><label class="legend-coverage">Deep Right</label>
+                            </div>
+
+                            <div id="cover3sky_LF" class="LF zonedrag" name="Left Flat" line="true" containment="defense"><label class="legend-coverage">Left Flat</label>
+                            </div>
+
+                            <div id="cover3sky_LC" class="LC zonedrag" name="Left Curl" line="true" containment="defense"><label class="legend-coverage">Left Curl</label>
+                            </div>
+
+                            <div id="cover3sky_DM" class="DM zonedrag" name="Dep Middle" line="true" containment="defense"><label class="legend-coverage">Deep Middle</label>
+                            </div>
+
+                            <div id="cover3sky_RC" class="RC zonedrag" name="Right Curl" line="true" containment="defense"><label class="legend-coverage">Right Curl</label>
+                            </div>
+
+                            <div id="cover3sky_RF" class="RF zonedrag" name="Right Flat" line="true" containment="defense"><label class="legend-coverage">Right Flat</label>
+                            </div>
+                        </div>
+
+                        <div class="lines" id="cover3sky_lines">
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line1" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line2" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line3" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line4" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line5" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line6" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover3sky_line7" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
                         </div>
 
                     </div>
