@@ -15,11 +15,22 @@ jQuery(document).ready(function(){
     jQuery('.dragelement[containment="defense"], .zonedrag').draggable({containment:'#defense_area'});
 
     select.addEventListener('change', function(){
-        jQuery('#cover1, #cover2man').hide();
+        jQuery('#cover1, #cover2man, #cover2zone, #cover3sky').hide();
         jQuery('#'+select.value).show();
         jQuery('.WR[containment="offense"], .RB[containment="offense"], .TE[containment="offense"]').attr('line', playersAttr[select.value]['haveLineOnOffense']);
+        setDefaultPositionElements(select.value);
         setDefaultPositionLines(document.querySelectorAll('#'+select.value+' .line'));
     })
+
+    function setDefaultPositionElements(cover){
+        document.querySelectorAll('#'+cover+' .dragelement, #'+cover+' .zonedrag').forEach((element, index, array) => {
+            const elementId = element.getAttribute('id').split('_')[1];
+            if(playersAttr[cover][elementId]){
+                element.style.top=playersAttr[cover][elementId][3];
+                element.style.left=playersAttr[cover][elementId][4];
+            }
+        })
+    }
 
     function moveLine(idElement){
         const cover = select.value;
