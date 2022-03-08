@@ -1,8 +1,10 @@
 jQuery(document).ready(function(){ 
+    
     const lines = document.querySelectorAll('#cover1 .line')
     const select = document.querySelector('#cover');
+
     setDefaultPositionLines(lines);
-    jQuery('.dragelement, .zonedrag').draggable({
+    jQuery('.dragelement:not(.DL), .zonedrag').draggable({
         scroll: false,
         disabled: false,
         drag: function(){
@@ -13,9 +15,40 @@ jQuery(document).ready(function(){
     });
     jQuery('.dragelement[containment="offense"]').draggable({containment:'#offense_area'});
     jQuery('.dragelement[containment="defense"], .zonedrag').draggable({containment:'#defense_area'});
+    jQuery('#tech, #gaps').hide();
+    jQuery('.dragelement.DL').draggable({
+        containment:'#defense_area', 
+        start: function() {
+            jQuery('#tech, #gaps').fadeIn(200);
+        },
+        drag: function(){
+            const gap = jQuery('#gaps .ui-droppable-hover').text();
+            const tech = jQuery('#tech .ui-droppable-hover').text();
+            jQuery('#tech div, #gaps div').removeClass('a-highlight')
+            DLplayers[document.querySelector('#cover').value][jQuery(this).attr('id').split('_')[1]][0] = tech;
+            DLplayers[document.querySelector('#cover').value][jQuery(this).attr('id').split('_')[1]][1] = gap;
+            jQuery('.gap-name').text(gap);
+            if(jQuery('#tech .ui-droppable-hover').length>0) jQuery('.tech-name').text(tech); 
+        },
+        stop: function() {
+            jQuery('#tech, #gaps').fadeOut(200);
+        },
+    });
+    jQuery( "#tech div, #gaps div" ).droppable({
+        accept: ".DL",
+        classes: {
+            "a-hover": "ui-state-hover",
+            "a-active": "ui-state-active"
+        },
+        drop: function( event, ui ) {
+          jQuery(this)
+            .addClass('a-highlight');
+            console.log('drop')
+        }
+      });
 
     select.addEventListener('change', function(){
-        jQuery('#cover1, #cover2man, #cover2zone, #cover3sky').hide();
+        jQuery('#cover1, #cover2man, #cover2zone, #cover3sky, #cover4').hide();
         jQuery('#'+select.value).show();
         jQuery('.WR[containment="offense"], .RB[containment="offense"], .TE[containment="offense"]').attr('line', playersAttr[select.value]['haveLineOnOffense']);
         setDefaultPositionElements(select.value);
