@@ -8,7 +8,9 @@ var players = {
             'bgPos': 'top',
             'cover1': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
             'cover2man': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
-            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
+            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
         },
         'Free Safety': {
             'description': 'Faz parte da <b>secundária</b>, grupo de jogadores responsáveis primariamente por <b>marcar o passe</b>, seja <b>mano-à-mano</b> ou em <b>zona</b>. Normalmente fica alinhado no fundo do campo cobrindo as zonas fundas.',
@@ -16,7 +18,9 @@ var players = {
             'bgPos': 'center',
             'cover1': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
             'cover2man': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
-            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
+            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
         },
         'Strong Safety': {
             'description': 'Faz parte da <b>secundária</b>, grupo de jogadores responsáveis primariamente por <b>marcar o passe</b>, seja <b>mano-à-mano</b> ou em <b>zona</b>. Normalmente fica alinhado no fundo do campo cobrindo as zonas fundas.',
@@ -24,7 +28,9 @@ var players = {
             'bgPos': 'top',
             'cover1': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
             'cover2man': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
-            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
+            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
         },
         'Linebacker': {
             'description': 'É o segundo nível da defesa contra o <b>jogo corrido</b>. Além de ocupar os <b>gaps</b> contra a corrida também pode ser responsável pela cobertura contra o <b>passe</b> e até mesmo sendo usado na <b>blitz</b> pra atacar o Quarterback.',
@@ -32,7 +38,9 @@ var players = {
             'bgPos': 'center',
             'cover1': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
             'cover2man': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
-            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
+            'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
+            'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está cobrindo o <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
         },
         'Wide Receiver': {
             'description': 'Faz parte do grupo de recebedores, sua função principal é correr <b>rotas</b> pelo campo e segurar a bola que o Quarterback lhe passa.',
@@ -84,5 +92,135 @@ var players = {
             'description': 'É O LT',
             'bgImg':'/style/imagens/deep-left.png',
             'bgPos': 'top'
+        },
+        'Edge': {
+            'description': 'É O EDGE',
+            'bgImg':'/style/imagens/deep-left.png',
+            'bgPos': 'top',
+            'textInfo': 'O <b>{player_name}</b> está alinhado no gap <b class="gap-name">{gap}</b> em <b class="tech-name">{tech}</b> technique. \n Isso significa que sua função é, além de atacar o Quarterback, impedir que o Runningback corra com a bola através do gap <b class="gap-name">{gap}</b>.',
+        },
+        'Defensive Tackle': {
+            'description': 'É O DT',
+            'bgImg':'/style/imagens/deep-left.png',
+            'bgPos': 'top',
+            'textInfo': 'O <b>{player_name}</b> está alinhado no gap <b class="gap-name">{gap}</b> em <b class="tech-name">{tech}</b> technique. \n Isso significa que sua função é, além de atacar o Quarterback, impedir que o Runningback corra com a bola através do gap <b class="gap-name">{gap}</b>.',
         }
 };
+ var zones = {
+     'Deep Middle': {
+        'description': 'É O DEEP MIDDLE',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover2man': null,
+        'cover2zone': null,
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Deep Left': {
+        'description': 'É O DEEP LEFT',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Deep Right': {
+        'description': 'É O DEEP RIGHT',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Left Flat': {
+        'description': 'É O LEFT FLAT',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': null,
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Left Curl': {
+        'description': 'É O LEFT CURL',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': null,
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Hook': {
+        'description': 'É O HOOK',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': null,
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': null,
+        'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Right Curl': {
+        'description': 'É O RIGHT CURL',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': null,
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     'Right Flat': {
+        'description': 'É O RIGHT FLAT',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover1': null,
+        'cover2man': null,
+        'cover2zone': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
+        'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+     },
+     '1/4 Deep': {
+        'description': 'É O 1/4 DEEP',
+        'bgImg':'/style/imagens/deep-left.png',
+        'bgPos': 'top',
+        'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
+        
+     }
+ }
+
+ var DLplayers = {
+    'cover1': {
+        'LE': ['5','C'],
+        'LDT': ['1', 'A'],
+        'RDT': ['2', 'B'],
+        'RE': ['5','C']
+    },
+    'cover2man': {
+        'LE': ['5','C'],
+        'LDT': ['1', 'A'],
+        'RDT': ['2', 'B'],
+        'RE': ['5','C']
+    },
+    'cover2zone': {
+        'LE': ['5','C'],
+        'LDT': ['1', 'A'],
+        'RDT': ['2', 'B'],
+        'RE': ['5','C']
+    },
+    'cover3sky': {
+        'LE': ['5','C'],
+        'LDT': ['2', 'B'],
+        'RDT': ['2i', 'A'],
+        'RE': ['5','C']
+    },
+    'cover4': {
+        'LE': ['5','C'],
+        'LDT': ['1', 'A'],
+        'RDT': ['2', 'B'],
+        'RE': ['5','C']
+    }
+}
