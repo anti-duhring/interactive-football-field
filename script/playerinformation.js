@@ -1,22 +1,50 @@
 jQuery(document).ready(function(){
 
 
-    const elements = document.querySelectorAll('.dragelement');
+    const playerElements = document.querySelectorAll('.dragelement:not(.DL)');
+    const zoneElements = document.querySelectorAll('.zonedrag');
+    const dlPlayersElements = document.querySelectorAll('.dragelement.DL');
+    const fieldInformation = document.querySelectorAll('.field-legend')
+    const buttonFieldInformation = document.querySelector('.show-field-information');
+    let btnFieldLegend = 'Mostrar informações do campo'
 
-    elements.forEach((element, index, array) => {
+    buttonFieldInformation.addEventListener('click',function() {
+        if(btnFieldLegend == 'Mostrar informações do campo') btnFieldLegend = 'Esconder informações do campo'
+        else if(btnFieldLegend == 'Esconder informações do campo') btnFieldLegend = 'Mostrar informações do campo'
+
+        buttonFieldInformation.textContent = btnFieldLegend
+        fieldInformation.forEach(element => {
+        element.classList.toggle('hide');
+       })
+       
+
+      })
+
+    dlPlayersElements.forEach((element, index, array) => {
         element.addEventListener('mousedown', function(){
-            showPositionInfo(element.getAttribute('name'), element.getAttribute('id'))
+            showDLInfo(element.getAttribute('name'), element.getAttribute('id').split('_')[1])
         })
     });
 
-    function showPositionInfo(name, id){
+    playerElements.forEach((element, index, array) => {
+        element.addEventListener('mousedown', function(){
+            showPositionInfo(element.getAttribute('name'), element.getAttribute('id'), players[element.getAttribute('name')])
+        })
+    });
+    zoneElements.forEach((element, index, array) => {
+        element.addEventListener('mousedown', function(){
+            showPositionInfo(element.getAttribute('name'), element.getAttribute('id'), zones[element.getAttribute('name')])
+        })
+    });
+
+    function showPositionInfo(name, id, player){
         const cover = document.querySelector('#cover').value;
-        let player = players[name];
         let idElement = id;
         if(id.indexOf('_')!=-1) idElement=id.split('_')[1]
         let pairType = 0;
         let hideItens = 0; 
-        let showItens = 0; 
+        let showItens = 0;
+        console.log(player) 
         const description = player['description'];
         const bgImg = 'url("'+player['bgImg']+'")';
         const bgPosition = player['bgPos'];
@@ -56,10 +84,22 @@ jQuery(document).ready(function(){
 
     }
 
-    function hidePositionInfo(){
-        jQuery('#dl-desc, .st-text, #db-desc, #cover-description').hide();
-        jQuery('.info-content h2').text('Clique em algum jogador');
-        jQuery('.bg-prospect').css('background-image', 'url("https://larrybrownsports.com/wp-content/uploads/2022/01/tom-brady-qb-768x475.jpg")');
-        jQuery('.bg-prospect').css('background-position', 'center center');
+    function showDLInfo(name, id){
+        const player = players[name];
+        const cover = document.querySelector('#cover').value;
+        const tech = DLplayers[cover][id][0];
+        const gap = DLplayers[cover][id][1]
+        const textDescription = player['textInfo'].replace('{player_name}', '<b>'+name+'</b>').replace('{gap}', '<b>'+gap+'</b>').replace('{tech}', '<b>'+tech+'</b>').replace('{gap}', '<b>'+gap+'</b>');
+        jQuery('#db-desc, #cover-description').hide()
+        jQuery('#dl-desc').show()
+
+        document.querySelector('.st-text').innerHTML= player['description'];
+        document.querySelector('#dl-desc').innerHTML= textDescription;
+        document.querySelector('.bg-prospect').style.backgroundImage = 'url("'+player['bgImg']+'")';
+        document.querySelector('.bg-prospect').style.backgroundPosition = player['bgPosition'];
+        document.querySelector('.info-content h2').textContent = name;
+
+        console.log(player['bgImg'])
+
     }
 });
