@@ -410,19 +410,74 @@
 .dragelement{
     z-index: 999;
 }
-/* offense and defense areas */
+/* field information */
+.field{
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
 div#defense_area {
     position: absolute;
     width: 100%;
-    height: 55%;
+    height: 54%;
 }
 
 div#offense_area {
     width: 100%;
-    height: 45%;
+    height: 46%;
     bottom: 0;
     position: absolute;
     border-top: 3.5px solid blue;
+}
+.legendarea {
+    margin: 10px;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 0px 6px black;
+    font-size: 1.3em;
+}
+#box {
+    position: absolute;
+    width: 300px;
+    height: 120px;
+    top: 255px;
+    left: 190px;
+    border: 3px solid #800080;
+    z-index: 9999;
+}
+legend.box-legend {
+    color: #800080;
+    font-size: 1.1em;
+}
+.lina-scrimmage {
+    position: absolute;
+    top: 370px;
+    background: blue;
+    color: white;
+    padding: 0 5px;
+}
+.hide{
+    display: none;
+}
+.buttons-field select, .buttons-field button {
+    background: var(--red-color);
+    border: 1px solid var(--red-color);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttons-field {
+    margin: 10px 0;
+}
+
+.buttons-field select:hover, .buttons-field button:hover {
+    color: var(--red-color);
+    background: white;
 }
 /* offensive players */
 div.WR, div.OL, div.TE {
@@ -756,6 +811,113 @@ div#cover2zone_RF{
     left: 555px;
     top: 250px;
 }
+/* cover4 */
+#cover4{
+    display:none;
+}
+
+div#cover4_CB1 {
+    left: 40px;
+}
+
+div#cover4_CB2 {
+    left: 520px;
+}
+
+div#cover4_CB3 {
+    left: 580px;
+}
+
+div#cover4_SS {
+    left: 358px;
+    top: 255px;
+}
+
+div#cover4_FS {
+    left: 259px;
+    top: 211px;
+}
+
+div#cover4_LE {
+    left: 200px;
+}
+
+div#cover4_LDT {
+    left: 300px;
+}
+
+div#cover4_RDT {
+    left: 370px;
+}
+
+div#cover4_RE {
+    left: 440px;
+}
+
+
+div#cover4_LLB {
+    left: 250px;
+}
+
+div#cover4_RLB {
+    left: 401px;
+    top: 297px;
+}
+div#cover4_onefourth,div#cover4_fourfourth,div#cover4_twofourth,div#cover4_threefourth  {
+    position: absolute;
+    z-index: 99;
+    width: 160px;
+    height: 160px;
+    top: 0px;
+    background: #0000ff75;
+    border-radius: 100vw;
+    line-height: 9;
+    padding: 10px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    text-align: center;
+}
+div#cover4_onefourth {
+    left: 173px;
+}
+div#cover4_twofourth {
+    top: 0px;
+    left: 0px;
+}
+div#cover4_threefourth {
+    top: 0px;
+    left: 530px;
+}
+div#cover4_fourfourth {
+    left: 354px;
+}
+div#cover4_LF, div#cover4_H, div#cover4_RF {
+position: absolute;
+z-index: 99;
+width: 170px;
+height: 170px;
+    background: #ff8d0091;
+    border-radius: 100vw;
+    line-height: 9.5;
+    padding: 10px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    text-align: center;
+}
+div#cover4_LF {
+    top: 250px;
+}
+
+
+div#cover4_H{
+    left: 278px;
+    top: 250px;
+}
+
+div#cover4_RF{
+    left: 555px;
+    top: 250px;
+}
 /* cover3sky */
 #cover3sky{
     display:none;
@@ -878,4 +1040,42 @@ div#cover3sky_RC {
 div#cover3sky_RF{
     left: 520px;
     top: 245px;
+}
+/* techs */
+div#tech {
+    display: grid;
+    grid-template-columns: repeat(18, 17px);
+    position: absolute;
+    top: 335px;
+    left: 213px;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, 
+    -1px -1px 0 #000;
+    text-align: center;
+}
+#tech div {
+    padding-top: 30px;
+}
+.ui-droppable-hover, .a-highlight {
+    color: red;
+}
+div#gaps {
+    display: grid;
+    grid-template-columns: repeat(7, 51px);
+    position: absolute;
+    top: 340px;
+    left: 187px;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, 
+-1px -1px 0 #000;
+    text-align: center;
+}
+
+div#d_r {
+text-align: left;
+padding-left: 10px;
+}
+
+#gaps div {
+padding-top: 50px;
 }
