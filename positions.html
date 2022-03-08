@@ -82,20 +82,27 @@ img.img-cut {
                </ul>
             </div>
             <div class="body-content">
+                <div class="buttons-field">
                <select name="cover" id="cover" class="butt change-cover">
        <option value="cover1">Cover 1 </option>
        <option value="cover2man">Cover 2 Man</option>
        <option value="cover2zone">Cover 2 Zone</option>
        <option value="cover3sky">Cover 3 Sky</option>
-     </select>
+       <option value="cover4">Cover 4</option>
+     </select> <button class="show-field-information">Mostrar informações do campo</button>
+    </div>
 
 
                <div class="content-left"></div>
                <div class="content-right"></div>
                <div class="content-middle">
                   <div class="field" >
-                      <div id="defense_area"></div>
-                      <div id="offense_area"></div>
+                      <div class="field-information" id="field-information">
+                      <div id="defense_area"><div class="legendarea defense_area field-legend hide">Defesa</div></div>
+                      <div id="offense_area"><div class="legendarea offense_area field-legend hide">Ataque</div></div>
+                      <fieldset class="box field-legend hide" id="box"><legend class="box-legend">Box</legend></fieldset>
+                      <div class="lina-scrimmage field-legend hide"><div class="line-scrimmage-legend">Linha de scrimmage</div></div>
+                    </div>
                     <div class="dragcontainer cover1" id="cover1">
 
                         <div id="cover1_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
@@ -108,13 +115,13 @@ img.img-cut {
 
                         <div id="cover1_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
 
-                        <div id="cover1_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+                        <div id="cover1_LE" name="Edge" class="dragelement DL" line="false" containment="defense" gap="C" tech="5"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
-                        <div id="cover1_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+                        <div id="cover1_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense" gap="A" tech="1"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-                        <div id="cover1_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+                        <div id="cover1_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense" gap="B" tech="2"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
 
-                        <div id="cover1_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+                        <div id="cover1_RE" name="Edge" class="dragelement DL" line="false" containment="defense" gap="C" tech="5"><span><label class="position-legend">Edge<i></i></label>E</span></div>
 
                         <div id="cover1_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
 
@@ -298,7 +305,7 @@ img.img-cut {
                             <div id="cover3sky_LC" class="LC zonedrag" name="Left Curl" line="true" containment="defense"><label class="legend-coverage">Left Curl</label>
                             </div>
 
-                            <div id="cover3sky_DM" class="DM zonedrag" name="Dep Middle" line="true" containment="defense"><label class="legend-coverage">Deep Middle</label>
+                            <div id="cover3sky_DM" class="DM zonedrag" name="Deep Middle" line="true" containment="defense"><label class="legend-coverage">Deep Middle</label>
                             </div>
 
                             <div id="cover3sky_RC" class="RC zonedrag" name="Right Curl" line="true" containment="defense"><label class="legend-coverage">Right Curl</label>
@@ -325,6 +332,71 @@ img.img-cut {
                         </div>
 
                     </div>
+                    <div class="dragcontainer cover4" id="cover4">
+
+                        <div id="cover4_CB1" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover4_CB2" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover4_CB3" name="Cornerback" class="dragelement CB" line="true" containment="defense"><span><label class="position-legend">Cornerback<i></i></label>CB</span></div>
+
+                        <div id="cover4_SS" name="Strong Safety" class="dragelement SS" line="true" containment="defense"><span><label class="position-legend">Strong Safety<i></i></label>SS</span></div>
+
+                        <div id="cover4_FS" name="Free Safety" class="dragelement FS" line="true" containment="defense"><span><label class="position-legend">Free Safety<i></i></label>FS</span></div>
+
+                        <div id="cover4_LE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+
+                        <div id="cover4_LDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+
+                        <div id="cover4_RDT" name="Defensive Tackle" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Defensive Tackle<i></i></label>DT</span></div>
+
+                        <div id="cover4_RE" name="Edge" class="dragelement DL" line="false" containment="defense"><span><label class="position-legend">Edge<i></i></label>E</span></div>
+
+                        <div id="cover4_LLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+
+                        <div id="cover4_RLB" name="Linebacker" class="dragelement LB" line="true" containment="defense"><span><label class="position-legend">Linebacker<i></i></label>LB</span></div>
+
+                        <div class="zones" id="cover4_zones">
+
+                            <div id="cover4_onefourth" class="onefourth zonedrag" name="1/4 Deep" line="true" containment="defense"><label class="legend-coverage">1/4</label>
+                            </div>
+
+                            <div id="cover4_fourfourth" class="fourfourth zonedrag" name="1/4 Deep" line="true" containment="defense"><label class="legend-coverage">1/4</label>
+                            </div>
+
+                            <div id="cover4_LF" class="LF zonedrag" name="Left Flat" line="true" containment="defense"><label class="legend-coverage">Left Flat</label>
+                            </div>
+
+                            <div id="cover4_twofourth" class="twofourth zonedrag" name="1/4 Deep" line="true" containment="defense"><label class="legend-coverage">1/4</label>
+                            </div>
+
+                            <div id="cover4_H" class="H zonedrag" name="Hook" line="true" containment="defense"><label class="legend-coverage">Hook</label>
+                            </div>
+
+                            <div id="cover4_threefourth" class="threefourth zonedrag" name="1/4 Deep" line="true" containment="defense"><label class="legend-coverage">1/4</label>
+                            </div>
+
+                            <div id="cover4_RF" class="RF zonedrag" name="Right Flat" line="true" containment="defense"><label class="legend-coverage">Right Flat</label>
+                            </div>
+                        </div>
+
+                        <div class="lines" id="cover4_lines">
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line1" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line2" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line3" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line4" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line5" x1="360" y1="140" x2="317" y2="191" stroke="#ff8d0091" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line6" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+
+                            <svg class="svg-line"  width="100%" height="100%"><line class="line" id="cover4_line7" x1="360" y1="140" x2="317" y2="191" stroke="#0000ff75" /></svg>
+                        </div>
+
+                    </div>
 
                     <div class="dragcontainer offense" id="offense_field">
                         <div id="WR1" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
@@ -332,7 +404,37 @@ img.img-cut {
                         <div id="WR2" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
 
                         <div id="WR3" name="Wide Receiver" class="dragelement WR" line="true" containment="offense"><span><label class="position-legend">Wide Receiver<i></i></label>WR</span></div>
+                        <div class="techs" id="tech">
 
+                            <div id="5_l" class="t544i" color-drop="1582FD"><label>5</label></div>
+                            <div id="4_l" class="t544i" color-drop="1582FD"><label>4</label></div>
+                            <div id="4i_l" class="t544i" color-drop="1582FD"><label>4i</label></div>
+                            <div id="3_l" class="t322i" color-drop="51BC37"><label>3</label></div>
+                            <div id="2_l" class="t322i" color-drop="51BC37"><label>2</label></div>
+                            <div id="2i_l" class="t322i" color-drop="51BC37"><label>2i</label></div>
+                            <div id="1_l" class="t10" color-drop="FCDD30"><label>1</label></div>
+                            <div id="0" class="t10" color-drop="FCDD30"><label>0</label></div>
+                            <div id="1_r" class="t10" color-drop="FCDD30"><label>1</label></div>
+                            <div id="2i_r" class="t322i" color-drop="51BC37"><label>2i</label></div>
+                            <div id="2_r" class="t322i" color-drop="51BC37"><label>2</label></div>
+                            <div id="3_r" class="t322i" color-drop="51BC37"><label>3</label></div>
+                            <div id="4i_r" class="t544i" color-drop="1582FD"><label>4i</label></div>
+                            <div id="4_r" class="t544i" color-drop="1582FD"><label>4</label></div>
+                            <div id="5_r" class="t544i" color-drop="1582FD"><label>5</label></div>
+                            <div id="6i_r" class="t966i" color-drop="EC3445"><label>6i</label></div>
+                            <div id="6_r" class="t966i" color-drop="EC3445"><label>6</label></div>
+                            <div id="9_r" class="t966i" color-drop="EC3445"><label>9</label></div>
+                              </div>
+                             
+                                <div id="gaps">
+                              <div class="c_l" id="c_l"><label>C</label></div>
+                              <div class="b_l" id="b_l"><label>B</label></div>
+                              <div class="a_l" id="a_l"><label>A</label></div>
+                              <div class="a_r" id="a_r"><label>A</label></div>
+                              <div class="b_r" id="b_r"><label>B</label></div>
+                              <div class="c_r" id="c_r"><label>C</label></div>
+                              <div class="d_r" id="d_r"><label>D</label></div>
+                                </div>
                         <div id="TE" name="Tight End" class="dragelement TE" line="true" containment="offense"><span><label class="position-legend">Tight End<i></i></label>TE</span></div>
 
                         <div id="LT" name="Left Tackle" class="dragelement OL" line="false" containment="offense"><span><label class="position-legend">Left Tackle<i></i></label>LT</span></div>
