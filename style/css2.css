@@ -167,7 +167,7 @@
   }
   
   .content-prospect {
-     width: 600px;
+     width: 690px;
       right: 50px;
       /* position: absolute; */
       background: var(--red-color);
@@ -400,7 +400,7 @@
   .content-middle {
     display: flex;
     flex-direction: row;
-    column-gap: 100px;
+    column-gap: 50px;
     flex-wrap: wrap;
 }
 
