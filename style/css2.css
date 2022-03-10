@@ -167,6 +167,9 @@
   }
   
   .content-prospect {
+      width: 40%;
+      right: 50px;
+      /* position: absolute; */
       background: var(--red-color);
       color: white;
       box-shadow: 0px 0px 5px 0px #b0b0b0;
@@ -395,9 +398,10 @@
 
 
   .content-middle {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 40%));
-    grid-gap: 100px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    flex-wrap: wrap;
 }
 
 .info-footer {
