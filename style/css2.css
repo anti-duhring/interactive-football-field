@@ -168,6 +168,7 @@
   
   .content-prospect {
       width: 40%;
+      min-width: 40%;
       right: 50px;
       /* position: absolute; */
       background: var(--red-color);
