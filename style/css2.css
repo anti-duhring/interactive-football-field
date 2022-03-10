@@ -167,7 +167,7 @@
   }
   
   .content-prospect {
-     width: 40vw;
+     width: 600px;
       right: 50px;
       /* position: absolute; */
       background: var(--red-color);
