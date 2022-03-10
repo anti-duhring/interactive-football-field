@@ -167,7 +167,7 @@
   }
   
   .content-prospect {
-      width: 40%;
+     width: 40vw;
       right: 50px;
       /* position: absolute; */
       background: var(--red-color);
@@ -175,9 +175,7 @@
       box-shadow: 0px 0px 5px 0px #b0b0b0;
       border-radius: 5px;
   }
-  .content-prospect {
-    width: 40vw;
-}
+
   
   
   .information-prospect .bg-prospect {
