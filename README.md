@@ -3,4 +3,4 @@ A interactive football field to help new football fans to understand how the gam
 
 You can see the progress here https://draft-2022.netlify.app/positions.html
 
-![Big-Board-Draft-Cougars](https://user-images.githubusercontent.com/99638905/156454386-6ca4f3a4-5aa7-4149-ba28-4e39f9f2aa28.png)
+![Big-Board-Draft-Cougars (2)](https://user-images.githubusercontent.com/99638905/158039824-0f7b6680-06f8-4e66-80a3-f2332b13e8f1.png)
