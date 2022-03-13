@@ -56,9 +56,17 @@ jQuery(document).ready(function(){
     })
 
     function setDefaultPositionElements(cover){
-        document.querySelectorAll('#'+cover+' .dragelement, #'+cover+' .zonedrag').forEach((element, index, array) => {
-            const elementId = element.getAttribute('id').split('_')[1];
+        
+        document.querySelectorAll('#'+cover+' .dragelement, #offense_field .dragelement, #'+cover+' .zonedrag').forEach((element, index, array) => {
+            let elementId = 0;
+            if(element.getAttribute('id').includes('_')){
+                elementId = element.getAttribute('id').split('_')[1];
+            }else{
+                elementId = element.getAttribute('id');
+            }
+             
             if(playersAttr[cover][elementId]){
+
                 element.style.top=playersAttr[cover][elementId][3];
                 element.style.left=playersAttr[cover][elementId][4];
             }

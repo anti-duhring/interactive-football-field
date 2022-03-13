@@ -50,7 +50,7 @@ var players = {
             'cover2man': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.']
         },
         'Tight End': {
-            'description': 'É O TE',
+            'description': 'É um híbrido de linha ofensiva com wide receiver, pois é usado tanto pra bloquear defensores que venham pra pressionar o <b>Quarterback</b> quanto pra correr rotas e receber passes.',
             'bgImg':'https://www.theplayoffs.com.br/wp-content/uploads/2020/08/Packers-WR-Davante-Adams-768x432.jpg',
             'bgPos': 'top',
             'cover1': ['mano-à-mano', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>{coverage_type}</b>.'],
@@ -69,7 +69,7 @@ var players = {
             'bgPos': 'top'
         },
         'Right Tackle': {
-            'description': 'É O RT',
+            'description': 'É o jogador da ponta da linha ofensiva. São os maiores e com os braços mais longos da OL. No jogo aéreo normalmente ficam responsáveis por bloquear o <b>Edge</b>.',
             'bgImg':'/style/imagens/deep-left.png',
             'bgPos': 'top'
         },
@@ -89,18 +89,18 @@ var players = {
             'bgPos': 'top'
         },
         'Left Tackle': {
-            'description': 'É O LT',
+            'description': 'É o jogador da ponta da linha ofensiva. São os maiores e com os braços mais longos da OL. No jogo aéreo normalmente ficam responsáveis por bloquear o <b>Edge</b>.',
             'bgImg':'/style/imagens/deep-left.png',
             'bgPos': 'top'
         },
         'Edge': {
-            'description': 'É O EDGE',
+            'description': 'Também chamados de Defensive End ou Outside Linebacker, são os jogadores da ponta da linha defensiva que tem como função principal pressionar o <b>Quarterback</b>.',
             'bgImg':'/style/imagens/deep-left.png',
             'bgPos': 'top',
             'textInfo': 'O <b>{player_name}</b> está alinhado no gap <b class="gap-name">{gap}</b> em <b class="tech-name">{tech}</b> technique. \n Isso significa que sua função é, além de atacar o Quarterback, impedir que o Runningback corra com a bola através do gap <b class="gap-name">{gap}</b>.',
         },
         'Defensive Tackle': {
-            'description': 'É O DT',
+            'description': 'Defensive Tackle, também chamado de Interior Defensive Lineman, são os jogadores do interior da linha defensiva. São normalmente os jogadores mais fortes fisicamente da defesa e sua função é tanto fechar os <b>gaps</b> pra impedir a corrida do <b>Runningback</b> quanto pressionar o <b>Quarterback</b>',
             'bgImg':'/style/imagens/deep-left.png',
             'bgPos': 'top',
             'textInfo': 'O <b>{player_name}</b> está alinhado no gap <b class="gap-name">{gap}</b> em <b class="tech-name">{tech}</b> technique. \n Isso significa que sua função é, além de atacar o Quarterback, impedir que o Runningback corra com a bola através do gap <b class="gap-name">{gap}</b>.',
@@ -108,7 +108,7 @@ var players = {
 };
  var zones = {
      'Deep Middle': {
-        'description': 'É O DEEP MIDDLE',
+        'description': 'São as zonas mais fundas do campo, marcadas pra impedir passes longos. A quantidade de defensores cobrindo a zona normalmente dá nome à jogada defensiva. Ex: Cover 2 são dois defensores cobrindo o fundo campo.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.'],
@@ -117,7 +117,7 @@ var players = {
         'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Deep Left': {
-        'description': 'É O DEEP LEFT',
+        'description': 'São as zonas mais fundas do campo, marcadas pra impedir passes longos. A quantidade de defensores cobrindo a zona normalmente dá nome à jogada defensiva. Ex: Cover 2 são dois defensores cobrindo o fundo campo.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -126,7 +126,7 @@ var players = {
         'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Deep Right': {
-        'description': 'É O DEEP RIGHT',
+        'description': 'São as zonas mais fundas do campo, marcadas pra impedir passes longos. A quantidade de defensores cobrindo a zona normalmente dá nome à jogada defensiva. Ex: Cover 2 são dois defensores cobrindo o fundo campo.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -135,7 +135,7 @@ var players = {
         'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Left Flat': {
-        'description': 'É O LEFT FLAT',
+        'description': 'Flat é a zona da região de baixo do campo da defesa mais perto das sidelines. Normalmente explorada por <b>Runningbacks</b> em <i>checkdowns</i> ou por recebedores correndo rotas curtas pra fora do campo.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -145,7 +145,7 @@ var players = {
         'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Left Curl': {
-        'description': 'É O LEFT CURL',
+        'description': 'Curl é a zona de baixo do campo que fica entre a <b>flat</b> e a <b>Hook</b>.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -155,7 +155,7 @@ var players = {
         'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Hook': {
-        'description': 'É O HOOK',
+        'description': 'Basicamente o meio do campo. Dependendo da formação pode ser uma única zona, coberta por um único LB, ou se dividir em duas (left e right) coberto por dois <b>Linebackers</b>.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -165,7 +165,7 @@ var players = {
         'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Right Curl': {
-        'description': 'É O RIGHT CURL',
+        'description': 'Curl é a zona de baixo do campo que fica entre a <b>flat</b> e a <b>Hook</b>.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -174,7 +174,7 @@ var players = {
         'cover3sky': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      'Right Flat': {
-        'description': 'É O RIGHT FLAT',
+        'description': 'Flat é a zona da região de baixo do campo da defesa mais perto das sidelines. Normalmente explorada por <b>Runningbacks</b> em <i>checkdowns</i> ou por recebedores correndo rotas curtas pra fora do campo.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover1': null,
@@ -184,7 +184,7 @@ var players = {
         'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
      },
      '1/4 Deep': {
-        'description': 'É O 1/4 DEEP',
+        'description': 'Um quarto do fundo do campo. Normalmente na cover 4 o defensor só recua pra cobrir o 1/4 quando os recebedores correm rotas pro longas, pra assim evitar que a região de baixo do campo da defesa fique com poucos defensores.',
         'bgImg':'/style/imagens/deep-left.png',
         'bgPos': 'top',
         'cover4': ['de zona', '#dl-desc', '#db-desc, #cover-description', 'O <b>{position}</b> está sendo coberto pelo <b>{player_pair}</b> em cobertura <b>de zona</b>.']
