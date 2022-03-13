@@ -354,7 +354,7 @@
       /*transition: 0.5s;*/
       color:white!important;
   }
-  label.position-legend {
+  .position-legend {
       opacity: 0;
       position: absolute;
       background: var(--red-color);
@@ -371,12 +371,18 @@
   }
   
   
-  .field span:hover .position-legend {
+  .field span:hover .position-legend, #box:hover .position-legend {
       opacity: 1;
   visibility:visible;
   
       /* top: 0px; */
-  }.position-legend i {
+  }
+  #box .position-legend{
+      color: white;
+      line-height: 30px;
+      text-align: center;
+  }
+  .position-legend i {
    position:absolute;
       top:100%;
       left:30%;
@@ -430,6 +436,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
+
 div#defense_area {
     position: absolute;
     width: 100%;
@@ -448,6 +455,9 @@ div#offense_area {
     color: white;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 0px 6px black;
     font-size: 1.3em;
+}
+.legendarea.offense_area.field-legend {
+    margin-top: 150px;
 }
 #box {
     position: absolute;
@@ -475,7 +485,7 @@ legend.box-legend {
 .buttons-field select, .buttons-field button {
     background: var(--red-color);
     border: 1px solid var(--red-color);
-    padding: 5px;
+    padding: 10px;
     color: white;
     border-radius: 5px;
     margin-right: 10px;
@@ -804,24 +814,24 @@ width: 135px;
     text-align: center;
 }
 div#cover2zone_LF {
-    top: 250px;
+    top: 244px;
 }
 
 div#cover2zone_LC {
     left: 139px;
-    top: 250px;
+    top: 244px;
 }
 div#cover2zone_H{
     left: 278px;
-    top: 250px;
+    top: 244px;
 }
 div#cover2zone_RC {
     left: 416px;
-    top: 250px;
+    top: 244px;
 }
 div#cover2zone_RF{
     left: 555px;
-    top: 250px;
+    top: 244px;
 }
 /* cover4 */
 #cover4{
