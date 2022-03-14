@@ -7,6 +7,14 @@ jQuery(document).ready(function(){
     const fieldInformation = document.querySelectorAll('.field-legend')
     const buttonFieldInformation = document.querySelector('.show-field-information');
     let btnFieldLegend = 'Mostrar informações do campo'
+    const box = document.querySelector('#box');
+    let boxObject = 
+        {
+            'name': 'Box',
+            'description': 'Box é a zona do meio do campo onde ficam os jogadores responsáveis por parar as corridas, como os jogadores de linha defensiva, Linebackers, Strong Safeties e etc.'
+        }
+    
+    box.addEventListener('click', boxPlayers)
 
     buttonFieldInformation.addEventListener('click',function() {
         if(btnFieldLegend == 'Mostrar informações do campo') btnFieldLegend = 'Esconder informações do campo'
@@ -102,4 +110,37 @@ jQuery(document).ready(function(){
         console.log(player['bgImg'])
 
     }
+
+
+
+
+
+function boxPlayers(){
+    const boxPlayersArray = [];
+    const cover = document.querySelector('#cover').value;
+
+    document.querySelectorAll('#'+cover+' .dragelement').forEach((element,index,array) => {
+        if(element.offsetTop <= document.querySelector('#box').offsetTop) return
+        if(element.offsetLeft <= document.querySelector('#box').offsetLeft) return
+        if(element.offsetLeft >= document.querySelector('#box').offsetLeft + 282) return
+
+    
+                    boxPlayersArray.push(element.getAttribute('id'));
+                    //console.log(element.getAttribute('id'),element.offsetTop, document.querySelector('#box').offsetTop)
+        
+    })
+    console.log(boxPlayersArray.length+' jogadores estão no box, são eles: '+boxPlayersArray)
+    showInformationsContent('Box', boxObject['description'], boxPlayersArray);
+}
+function showInformationsContent(name, desc, boxPlayersArray){
+    const title = document.querySelector('.info-content h2');
+    const description = document.querySelector('.st-text');
+    const info = document.querySelector('#db-desc');
+    title.textContent = name;
+    description.innerHTML = desc;
+    info.innerHTML = '<b>'+boxPlayersArray.length+'</b> jogadores estão alinhados no box.';
+    jQuery('p#dl-desc').hide();
+    jQuery('p#cover-description').hide();
+}
+
 });
