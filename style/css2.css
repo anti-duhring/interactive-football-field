@@ -343,15 +343,16 @@
       /* border-style: outset; */
       box-shadow: 0px 0px 5px 0px #000000b3;
       z-index:9999!important;
+      transition: .3s;
   }
   .safeties {
       z-index: 99999;
   }
   
-  span.CB3, span.CB2, span.CB1, span.CB4, span.FS, span.LLB, span.RLB, span.RE, span.DTL, span.DTR, span.LE {
-      background: white;
-      color: var(--black-color);
-  }
+  .field #cover1 span, .field #cover2man span,.field #cover2zone span, .field #cover3sky span, .field #cover4 span {
+    background: white;
+    color: var(--black-color);
+}
   .field span:hover, span.act {
       background: var(--red-color)!important;
       /*transition: 0.5s;*/
